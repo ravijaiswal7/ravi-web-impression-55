@@ -39,7 +39,7 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
             <p className="text-lg text-foreground/80 mb-6">
-              I am a dedicated Front End Developer with over 9 years of experience in building 
+              I am a dedicated Front End Developer with over 10 years of experience in building 
               exceptional digital experiences. Currently serving as a Module Lead at LTIMindtree, 
               I specialize in React JS development and front-end technologies.
             </p>

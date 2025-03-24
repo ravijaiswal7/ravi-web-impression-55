@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Briefcase, Building, GraduationCap } from 'lucide-react';
 import Timeline from './Timeline';
@@ -47,7 +46,7 @@ const Experience = () => {
                 Work Experience
               </h3>
               <p className="text-foreground/70">
-                Over 9 years of professional experience in front-end development, 
+                Over 10 years of professional experience in front-end development, 
                 focusing on creating exceptional user interfaces and experiences.
               </p>
             </div>
@@ -76,7 +75,8 @@ const Experience = () => {
                 <div className="flex gap-4">
                   <div className="w-16 h-16 rounded-lg bg-white shadow-soft flex items-center justify-center p-2 flex-shrink-0">
                     <LoadingImage
-                      src="https://media.licdn.com/dms/image/v2/C510BAQFjzoPvp1G51A/company-logo_400_400/company-logo_400_400/0/1631396846411?e=1748476800&v=beta&t=GSO9C9zdRG_auNVUFYizw5vlMoFL7xauj_jSu1F12fE"
+                      src="/images/certifications/mgr_logo.jpg"
+                      fallbackSrc="/images/certifications/placeholder.svg"
                       alt="Dr MGR Educational and Research Institute"
                       className="w-full h-full object-contain"
                     />
@@ -100,7 +100,8 @@ const Experience = () => {
                 <div className="flex gap-4">
                   <div className="w-16 h-16 rounded-lg bg-white shadow-soft flex items-center justify-center p-2 flex-shrink-0">
                     <LoadingImage
-                      src="https://media.licdn.com/dms/image/v2/C510BAQGmkbWS1jg_6g/company-logo_400_400/company-logo_400_400/0/1630624170432/dav_schools_network_logo?e=1748476800&v=beta&t=8EOn4FlMeGhI40LUsuJAi0wqyOPkGPBQY9EHyeWZTXA"
+                      src="/images/certifications/dav_schools_network_logo.jpg"
+                      fallbackSrc="/images/certifications/placeholder.svg"
                       alt="DAV Schools Network"
                       className="w-full h-full object-contain"
                     />
@@ -136,20 +137,189 @@ const Experience = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pl-0 md:pl-20">
               <div className={`glass-morphism rounded-xl p-6 transition-all duration-700 delay-700 hover-card ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-                <h4 className="font-display text-lg font-medium mb-2">
-                  Micro1 Certified Lead Frontend Developer
-                </h4>
-                <p className="text-sm text-foreground/70 mb-3">Expected in 2025</p>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-lg bg-white shadow-soft flex items-center justify-center p-2 flex-shrink-0">
+                    <LoadingImage
+                      src="/images/certifications/microsoft.svg"
+                      alt="Microsoft"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div>
+                    <h4 className="font-display text-lg font-medium mb-1">
+                      AZ-900: Azure Fundamentals
+                    </h4>
+                    <p className="text-sm text-foreground/70">Microsoft • August 2023</p>
+                  </div>
+                </div>
+                <p className="text-foreground/80">
+                  Microsoft certification validating foundational knowledge of cloud services and Azure.
+                </p>
+              </div>
+              
+              <div className={`glass-morphism rounded-xl p-6 transition-all duration-700 delay-800 hover-card ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-lg bg-white shadow-soft flex items-center justify-center p-2 flex-shrink-0">
+                    <LoadingImage
+                      src="/images/certifications/pluralsight.svg"
+                      alt="Pluralsight"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div>
+                    <h4 className="font-display text-lg font-medium mb-1">
+                      Web Accessibility
+                    </h4>
+                    <p className="text-sm text-foreground/70">Pluralsight • November 2023</p>
+                  </div>
+                </div>
+                <p className="text-foreground/80">
+                  Comprehensive training in web accessibility standards and best practices.
+                </p>
+              </div>
+
+              <div className={`glass-morphism rounded-xl p-6 transition-all duration-700 delay-900 hover-card ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-lg bg-white shadow-soft flex items-center justify-center p-2 flex-shrink-0">
+                    <LoadingImage
+                      src="/images/certifications/ltimindtree_logo.jpg"
+                      alt="LTIMindtree"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div>
+                    <h4 className="font-display text-lg font-medium mb-1">
+                      iLead
+                    </h4>
+                    <p className="text-sm text-foreground/70">LTIMindtree • January 2024</p>
+                  </div>
+                </div>
+                <p className="text-foreground/80">
+                  Leadership development program focusing on team management and project leadership.
+                </p>
+              </div>
+
+              <div className={`glass-morphism rounded-xl p-6 transition-all duration-700 delay-1000 hover-card ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-lg bg-white shadow-soft flex items-center justify-center p-2 flex-shrink-0">
+                    <LoadingImage
+                      src="/images/certifications/ltimindtree_logo.jpg"
+                      alt="LTIMindtree"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div>
+                    <h4 className="font-display text-lg font-medium mb-1">
+                      GenAI
+                    </h4>
+                    <p className="text-sm text-foreground/70">LTIMindtree • September 2024</p>
+                  </div>
+                </div>
+                <p className="text-foreground/80">
+                  Advanced training in Generative AI technologies and applications.
+                </p>
+              </div>
+
+              <div className={`glass-morphism rounded-xl p-6 transition-all duration-700 delay-1100 hover-card ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-lg bg-white shadow-soft flex items-center justify-center p-2 flex-shrink-0">
+                    <LoadingImage
+                      src="/images/certifications/pluralsight.svg"
+                      alt="Pluralsight"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div>
+                    <h4 className="font-display text-lg font-medium mb-1">
+                      Agile Fundamentals
+                    </h4>
+                    <p className="text-sm text-foreground/70">Pluralsight • October 2024</p>
+                  </div>
+                </div>
+                <p className="text-foreground/80">
+                  Comprehensive understanding of Agile methodologies and practices.
+                </p>
+              </div>
+
+              <div className={`glass-morphism rounded-xl p-6 transition-all duration-700 delay-1200 hover-card ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-lg bg-white shadow-soft flex items-center justify-center p-2 flex-shrink-0">
+                    <LoadingImage
+                      src="/images/certifications/imocha.svg"
+                      alt="iMocha"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div>
+                    <h4 className="font-display text-lg font-medium mb-1">
+                      Javascript
+                    </h4>
+                    <p className="text-sm text-foreground/70">iMocha • February 2025</p>
+                  </div>
+                </div>
+                <p className="text-foreground/80">
+                  Advanced JavaScript concepts and modern development practices.
+                </p>
+              </div>
+
+              <div className={`glass-morphism rounded-xl p-6 transition-all duration-700 delay-1300 hover-card ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-lg bg-white shadow-soft flex items-center justify-center p-2 flex-shrink-0">
+                    <LoadingImage
+                      src="/images/certifications/imocha.svg"
+                      alt="iMocha"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div>
+                    <h4 className="font-display text-lg font-medium mb-1">
+                      Advanced React JS
+                    </h4>
+                    <p className="text-sm text-foreground/70">iMocha • February 2025</p>
+                  </div>
+                </div>
+                <p className="text-foreground/80">
+                  Expert-level React.js development, including advanced patterns and optimization.
+                </p>
+              </div>
+
+              <div className={`glass-morphism rounded-xl p-6 transition-all duration-700 delay-1400 hover-card ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-lg bg-white shadow-soft flex items-center justify-center p-2 flex-shrink-0">
+                    <LoadingImage
+                      src="/images/certifications/micro1_logo.jpg"
+                      alt="Micro1"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div>
+                    <h4 className="font-display text-lg font-medium mb-1">
+                      Micro1 Certified Lead Frontend Developer
+                    </h4>
+                    <p className="text-sm text-foreground/70">Expected in 2025</p>
+                  </div>
+                </div>
                 <p className="text-foreground/80">
                   Advanced certification in frontend development leadership, architecture, and best practices.
                 </p>
               </div>
               
-              <div className={`glass-morphism rounded-xl p-6 transition-all duration-700 delay-800 hover-card ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-                <h4 className="font-display text-lg font-medium mb-2">
-                  Masterclass on API Development using Node.js
-                </h4>
-                <p className="text-sm text-foreground/70 mb-3">2023</p>
+              <div className={`glass-morphism rounded-xl p-6 transition-all duration-700 delay-1500 hover-card ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-lg bg-white shadow-soft flex items-center justify-center p-2 flex-shrink-0">
+                    <LoadingImage
+                      src="/images/certifications/airtribe.svg"
+                      alt="Airtribe"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div>
+                    <h4 className="font-display text-lg font-medium mb-1">
+                      Masterclass on API Development using Node.js
+                    </h4>
+                    <p className="text-sm text-foreground/70">2023</p>
+                  </div>
+                </div>
                 <p className="text-foreground/80">
                   Comprehensive training in building robust and scalable APIs using Node.js, including security best practices.
                 </p>

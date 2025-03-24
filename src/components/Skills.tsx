@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from 'react';
 import { Code, Database, Server, Layout, Cpu, Users } from 'lucide-react';
 
@@ -164,7 +163,7 @@ const Skills = () => {
                   <div className="w-2 h-2 rounded-full bg-primary" />
                 </div>
                 <p>
-                  <span className="font-medium">Multiple Spot Awards</span> for exceptional performance and dedication to project delivery.
+                  <span className="font-medium">Successfully managed freelance projects</span> alongside full-time employment, delivering high-quality solutions during weekends and off-hours.
                 </p>
               </li>
               <li className="flex gap-3">
@@ -172,7 +171,7 @@ const Skills = () => {
                   <div className="w-2 h-2 rounded-full bg-primary" />
                 </div>
                 <p>
-                  <span className="font-medium">Led multiple critical projects</span> from concept to successful deployment, ensuring high performance and user satisfaction.
+                  <span className="font-medium">Led critical projects</span> from concept to deployment, ensuring optimal performance and client satisfaction.
                 </p>
               </li>
               <li className="flex gap-3">
@@ -188,7 +187,7 @@ const Skills = () => {
                   <div className="w-2 h-2 rounded-full bg-primary" />
                 </div>
                 <p>
-                  <span className="font-medium">Mentored junior developers</span> and conducted knowledge-sharing sessions on front-end best practices.
+                  <span className="font-medium">Received multiple spot awards</span> for exceptional performance and project delivery excellence.
                 </p>
               </li>
             </ul>

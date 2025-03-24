@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 
 interface LoadingImageProps {
@@ -7,11 +6,13 @@ interface LoadingImageProps {
   className?: string;
   width?: number;
   height?: number;
+  fallbackSrc?: string;
 }
 
-const LoadingImage = ({ src, alt, className = "", width, height }: LoadingImageProps) => {
+const LoadingImage = ({ src, alt, className = "", width, height, fallbackSrc }: LoadingImageProps) => {
   const [loading, setLoading] = useState(true);
   const [imageSrc, setImageSrc] = useState("");
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const img = new Image();
@@ -19,8 +20,16 @@ const LoadingImage = ({ src, alt, className = "", width, height }: LoadingImageP
     img.onload = () => {
       setImageSrc(src);
       setLoading(false);
+      setError(false);
     };
-  }, [src]);
+    img.onerror = () => {
+      if (fallbackSrc) {
+        setImageSrc(fallbackSrc);
+        setLoading(false);
+      }
+      setError(true);
+    };
+  }, [src, fallbackSrc]);
 
   return (
     <div className={`relative overflow-hidden ${className}`} style={{ width, height }}>
