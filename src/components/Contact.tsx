@@ -119,12 +119,12 @@ const Contact = () => {
                 <div>
                   <h4 className="font-medium text-lg">LinkedIn</h4>
                   <a 
-                    href="https://linkedin.com/in/ravi-jaiswal" 
+                    href="https://www.linkedin.com/in/ravijais/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-foreground/70 hover:text-primary transition-colors"
                   >
-                    linkedin.com/in/ravi-jaiswal
+                    linkedin.com/in/ravijais/
                   </a>
                 </div>
               </div>
@@ -136,12 +136,12 @@ const Contact = () => {
                 <div>
                   <h4 className="font-medium text-lg">GitHub</h4>
                   <a 
-                    href="https://github.com/ravi-jaiswal" 
+                    href="https://github.com/ravijaiswal7" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-foreground/70 hover:text-primary transition-colors"
                   >
-                    github.com/ravi-jaiswal
+                    github.com/ravijaiswal7
                   </a>
                 </div>
               </div>
@@ -151,7 +151,7 @@ const Contact = () => {
               <h4 className="font-medium text-lg mb-4">Connect</h4>
               <div className="flex gap-4">
                 <a 
-                  href="https://linkedin.com/in/ravi-jaiswal" 
+                  href="https://www.linkedin.com/in/ravijais/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition-colors"
@@ -160,7 +160,7 @@ const Contact = () => {
                   <Linkedin size={18} />
                 </a>
                 <a 
-                  href="https://github.com/ravi-jaiswal" 
+                  href="https://github.com/ravijaiswal7" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition-colors"

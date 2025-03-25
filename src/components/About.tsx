@@ -53,7 +53,7 @@ const About = () => {
               <div className="space-y-4">
                 <div className="flex items-center gap-2">
                   <Briefcase className="text-primary w-5 h-5" />
-                  <span className="font-medium">9+ Years Experience</span>
+                  <span className="font-medium">10+ Years Experience</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <BookOpen className="text-primary w-5 h-5" />
