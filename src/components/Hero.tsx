@@ -23,7 +23,7 @@ const Hero = () => {
           <div className={`space-y-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
             <div className="inline-block">
               <span className="px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-medium tracking-wider">
-                MODULE LEAD
+                Technical Manager | Lead Front End Developer | Freelancer
               </span>
             </div>
             
@@ -34,7 +34,7 @@ const Hero = () => {
             
             <p className="text-lg md:text-xl text-foreground/80 max-w-lg">
               Specialized in building exceptional digital experiences with React JS. 
-              Currently leading front-end development at LTIMindtree.
+              Currently leading front-end development at HCLTech.
             </p>
             
             <div className="flex flex-wrap gap-4">
