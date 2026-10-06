@@ -174,6 +174,7 @@ const Timeline = () => {
           <TimelineItem
             key={index}
             company={item.company}
+            location={item.location}
             position={item.position}
             period={item.period}
             description={item.description}
