@@ -61,7 +61,7 @@ const Hero = () => {
             >
               <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
                 <LoadingImage
-                  src="https://media.licdn.com/dms/image/v2/C4E03AQEg1kgPqTL3uw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1570506875201?e=1748476800&v=beta&t=7ueOtXgCykoyPNA0QuypyzEXZPQ4VuDGuCxXkgT98y0"
+                  src="/assets/ravi-profile.jpg"
                   alt="Ravi Jaiswal"
                   className="w-full h-full object-cover"
                 />

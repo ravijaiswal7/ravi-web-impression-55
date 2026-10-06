@@ -8,10 +8,13 @@ interface TimelineItemProps {
   position: string;
   period: string;
   description: string;
-  logoUrl: string;
+  logoUrl?: string;
   index: number;
   isVisible: boolean;
 }
+
+const getInitials = (name: string) =>
+  name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
 
 const TimelineItem = ({ 
   company, 
@@ -22,6 +25,8 @@ const TimelineItem = ({
   index,
   isVisible
 }: TimelineItemProps) => {
+  const [logoError, setLogoError] = useState(false);
+
   return (
     <div 
       className={`timeline-item transition-all duration-700 ${
@@ -35,12 +40,20 @@ const TimelineItem = ({
     >
       <span className="timeline-dot" />
       <div className="flex gap-4">
-        <div className="w-16 h-16 rounded-lg bg-white shadow-soft flex items-center justify-center p-2 flex-shrink-0">
-          <LoadingImage
-            src={logoUrl}
-            alt={company}
-            className="w-full h-full object-contain"
-          />
+        <div className="w-16 h-16 rounded-lg bg-white shadow-soft flex items-center justify-center p-2 flex-shrink-0 overflow-hidden">
+          {logoError || !logoUrl ? (
+            <span className="font-display text-lg font-semibold text-primary">
+              {getInitials(company)}
+            </span>
+          ) : (
+            <img
+              src={logoUrl}
+              alt={company}
+              loading="lazy"
+              className="w-full h-full object-contain"
+              onError={() => setLogoError(true)}
+            />
+          )}
         </div>
         <div>
           <h3 className="font-display text-lg font-medium">{position}</h3>
@@ -84,28 +97,28 @@ const Timeline = () => {
       position: 'Module Lead, Senior Front End Developer',
       period: 'Current',
       description: 'Leading front-end development teams in React JS, implementing best practices, and driving innovation to deliver exceptional user experiences.',
-      logoUrl: 'https://media.licdn.com/dms/image/v2/D560BAQGGLta3hPvdRg/company-logo_400_400/company-logo_400_400/0/1735812238218/ltimindtree_logo?e=1748476800&v=beta&t=RAijA3ENiSKBdS9cK3DfHsvYxqcvV6pmGbGoPw1ypVk'
+      logoUrl: '/images/certifications/ltimindtree_logo.jpg'
     },
     {
       company: 'HARMAN India',
       position: 'Technical Lead',
       period: '2019 - 2021',
       description: 'Spearheaded front-end development initiatives, mentored junior developers, and implemented complex UI features for automotive solutions.',
-      logoUrl: 'https://media.licdn.com/dms/image/v2/D560BAQGDKElnmeXZQg/company-logo_400_400/company-logo_400_400/0/1719928441230/harmanindia_logo?e=1748476800&v=beta&t=fxHjXdY0fUZ13PZtIuYCg-peAyq3H8nDpcy6GWegZG8'
+      logoUrl: undefined
     },
     {
       company: 'Societe Generale Global Solution Centre',
       position: 'Senior Software Engineer',
       period: '2017 - 2019',
       description: 'Delivered robust front-end solutions for financial applications, collaborated with cross-functional teams, and optimized application performance.',
-      logoUrl: 'https://media.licdn.com/dms/image/v2/C510BAQFwBvGQK2NyEA/company-logo_400_400/company-logo_400_400/0/1630620434106/societe_generale_global_solution_centre_logo?e=1748476800&v=beta&t=afWmkCvrBkz4QEuaQj-zhl7r4dfBRKN1K6fJA3teGmE'
+      logoUrl: undefined
     },
     {
       company: 'IGATE',
       position: 'Software Engineer',
       period: '2014 - 2017',
       description: 'Built responsive and accessible web interfaces, collaborated with UX teams, and contributed to the implementation of design systems.',
-      logoUrl: 'https://media.licdn.com/dms/image/v2/C560BAQGhqirWXYV_lQ/company-logo_400_400/company-logo_400_400/0/1631390179765?e=1748476800&v=beta&t=dv7Vr84VESixCR_NhSYgV6EC6rNQFRrdgvGGGFOYE2o'
+      logoUrl: undefined
     }
   ];
 
