@@ -13,6 +13,9 @@ interface TimelineItemProps {
   isVisible: boolean;
 }
 
+const getInitials = (name: string) =>
+  name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
+
 const TimelineItem = ({ 
   company, 
   position, 
@@ -22,6 +25,8 @@ const TimelineItem = ({
   index,
   isVisible
 }: TimelineItemProps) => {
+  const [logoError, setLogoError] = useState(false);
+
   return (
     <div 
       className={`timeline-item transition-all duration-700 ${
@@ -35,12 +40,20 @@ const TimelineItem = ({
     >
       <span className="timeline-dot" />
       <div className="flex gap-4">
-        <div className="w-16 h-16 rounded-lg bg-white shadow-soft flex items-center justify-center p-2 flex-shrink-0">
-          <LoadingImage
-            src={logoUrl}
-            alt={company}
-            className="w-full h-full object-contain"
-          />
+        <div className="w-16 h-16 rounded-lg bg-white shadow-soft flex items-center justify-center p-2 flex-shrink-0 overflow-hidden">
+          {logoError ? (
+            <span className="font-display text-lg font-semibold text-primary">
+              {getInitials(company)}
+            </span>
+          ) : (
+            <img
+              src={logoUrl}
+              alt={company}
+              loading="lazy"
+              className="w-full h-full object-contain"
+              onError={() => setLogoError(true)}
+            />
+          )}
         </div>
         <div>
           <h3 className="font-display text-lg font-medium">{position}</h3>
