@@ -1,7 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Briefcase, BookOpen, Code, Award, Heart } from 'lucide-react';
-import LoadingImage from './LoadingImage';
+import { Briefcase, Cpu, Code, Award, Sparkles, Building2 } from 'lucide-react';
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -24,69 +23,68 @@ const About = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  
+
+  const certifications = [
+    'Generative AI Leader',
+    'GenAI Frontend Developer',
+    'AWS Agentic AI Essentials',
+    'Google Cloud Prompt Engineering',
+  ];
+
+  const clients = [
+    'World Bank',
+    'GE Healthcare',
+    'Deloitte',
+    'MRI|SIMMONS',
+    'NBC Universal',
+  ];
+
   return (
     <section id="about" className="py-20 md:py-28 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-sm font-medium tracking-wider text-primary uppercase mb-3">About Me</h2>
           <h3 className="font-display text-3xl md:text-4xl font-bold tracking-tight">
-            Senior Front End Developer
+            Frontend Engineering Manager
           </h3>
           <div className="w-16 h-1 bg-primary mx-auto mt-6"></div>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
             <p className="text-lg text-foreground/80 mb-6">
-              I am a dedicated Front End Developer with over 10 years of experience in building 
-              exceptional digital experiences. Currently serving as a Module Lead at LTIMindtree, 
-              I specialize in React JS development and front-end technologies.
+              I'm a Frontend Engineering Manager with 11+ years of experience designing and delivering scalable web applications. My expertise spans React, Next.js, JavaScript, and TypeScript, and I focus on clean architecture and practical decisions that help teams move faster while maintaining reliability and performance.
+            </p>
+            <p className="text-lg text-foreground/80 mb-6">
+              Over the years, I've worked with global clients including the World Bank, GE Healthcare, Deloitte, MRI|SIMMONS, and NBC Universal, leading projects that improved usability, performance, and overall user experience. At HCLTech, I currently lead frontend development for the World Bank Data Hub, where I guided the upgrade to React 18, introduced modern testing practices, and improved Lighthouse performance scores by 30%. At LTIMindtree, I delivered high-impact solutions for healthcare and enterprise clients, mentoring developers and ensuring smooth adoption of new technologies. My earlier roles at Harman, Société Générale, and IGATE gave me a strong foundation in full-stack development, problem-solving, and building robust UI workflows.
             </p>
             <p className="text-lg text-foreground/80 mb-8">
-              With a strong foundation in Computer Science and expertise in modern web technologies, 
-              I focus on creating responsive, performant, and accessible user interfaces. I am passionate 
-              about clean code, innovative solutions, and collaborative development practices.
+              Alongside frontend leadership, I hold multiple certifications in Generative AI, including Generative AI Leader, GenAI Frontend Developer, AWS Agentic AI Essentials, and Google Cloud Prompt Engineering. I've built real-world AI applications using Gemini and Imagen, explored multimodal RAG workflows, and applied AI to make frontend development smarter — from automated testing to design optimization.
+            </p>
+            <p className="text-lg text-foreground/80 mb-10">
+              I thrive on bridging the gap between clients and engineering teams, mentoring developers, and solving complex challenges. If you're looking for a leader who combines technical depth with Generative AI expertise and a track record of delivering measurable results, let's connect.
             </p>
             
             <div className="grid grid-cols-2 gap-6">
               <div className="space-y-4">
                 <div className="flex items-center gap-2">
                   <Briefcase className="text-primary w-5 h-5" />
-                  <span className="font-medium">10+ Years Experience</span>
+                  <span className="font-medium">11+ Years Experience</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <BookOpen className="text-primary w-5 h-5" />
-                  <span className="font-medium">Computer Science Graduate</span>
+                  <Code className="text-primary w-5 h-5" />
+                  <span className="font-medium">React &amp; Next.js Expert</span>
                 </div>
               </div>
               <div className="space-y-4">
                 <div className="flex items-center gap-2">
-                  <Code className="text-primary w-5 h-5" />
-                  <span className="font-medium">Front End Specialist</span>
+                  <Cpu className="text-primary w-5 h-5" />
+                  <span className="font-medium">GenAI Specialist</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Award className="text-primary w-5 h-5" />
-                  <span className="font-medium">Multiple Spot Awards</span>
+                  <span className="font-medium">Team Leader &amp; Mentor</span>
                 </div>
-              </div>
-            </div>
-            
-            <div className="mt-10">
-              <h4 className="font-medium text-lg mb-4">Personal Interests</h4>
-              <div className="flex flex-wrap gap-3">
-                <span className="px-3 py-1.5 rounded-full bg-blue-100 text-blue-800 text-sm">
-                  Cricket
-                </span>
-                <span className="px-3 py-1.5 rounded-full bg-blue-100 text-blue-800 text-sm">
-                  Technology
-                </span>
-                <span className="px-3 py-1.5 rounded-full bg-blue-100 text-blue-800 text-sm">
-                  Professional Networking
-                </span>
-                <span className="px-3 py-1.5 rounded-full bg-blue-100 text-blue-800 text-sm">
-                  Volunteering
-                </span>
               </div>
             </div>
           </div>
@@ -94,66 +92,35 @@ const About = () => {
           <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
             <div className="relative">
               <div className="glass-morphism rounded-xl p-6 md:p-8">
-                <h4 className="font-display text-xl font-semibold mb-6">Volunteer Work</h4>
+                <h4 className="font-display text-xl font-semibold mb-6">Generative AI Certifications</h4>
                 
                 <div className="space-y-5">
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0">
-                      <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
-                        <Heart className="text-primary w-6 h-6" />
+                  {certifications.map((cert) => (
+                    <div key={cert} className="flex gap-4">
+                      <div className="flex-shrink-0">
+                        <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+                          <Sparkles className="text-primary w-6 h-6" />
+                        </div>
+                      </div>
+                      <div className="flex items-center">
+                        <h5 className="font-medium">{cert}</h5>
                       </div>
                     </div>
-                    <div>
-                      <h5 className="font-medium">iCare</h5>
-                      <p className="text-foreground/70 text-sm mt-1">
-                        Providing IT education to underprivileged youth
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex gap-4">
-                    <div className="flex-shrink-0">
-                      <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
-                        <Heart className="text-primary w-6 h-6" />
-                      </div>
-                    </div>
-                    <div>
-                      <h5 className="font-medium">HelpAge India</h5>
-                      <p className="text-foreground/70 text-sm mt-1">
-                        Social services for elderly care and support
-                      </p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
                 
-                <h4 className="font-display text-xl font-semibold mt-10 mb-6">Languages</h4>
+                <h4 className="font-display text-xl font-semibold mt-10 mb-6">Global Clients</h4>
                 <div className="space-y-4">
-                  <div>
-                    <div className="flex justify-between mb-1">
-                      <span className="font-medium text-sm">English</span>
-                      <span className="text-xs text-foreground/70">Fluent</span>
-                    </div>
-                    <div className="skill-bar">
-                      <div className="skill-bar-fill" style={{ width: '95%' }}></div>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="flex justify-between mb-1">
-                      <span className="font-medium text-sm">Hindi</span>
-                      <span className="text-xs text-foreground/70">Fluent</span>
-                    </div>
-                    <div className="skill-bar">
-                      <div className="skill-bar-fill" style={{ width: '95%' }}></div>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="flex justify-between mb-1">
-                      <span className="font-medium text-sm">Kannada</span>
-                      <span className="text-xs text-foreground/70">Elementary</span>
-                    </div>
-                    <div className="skill-bar">
-                      <div className="skill-bar-fill" style={{ width: '30%' }}></div>
-                    </div>
+                  <div className="flex flex-wrap gap-3">
+                    {clients.map((client) => (
+                      <span
+                        key={client}
+                        className="px-3 py-1.5 rounded-full bg-blue-100 text-blue-800 text-sm flex items-center gap-1.5"
+                      >
+                        <Building2 className="w-3.5 h-3.5" />
+                        {client}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
