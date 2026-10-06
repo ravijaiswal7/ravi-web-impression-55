@@ -8,7 +8,7 @@ interface TimelineItemProps {
   position: string;
   period: string;
   description: string;
-  logoUrl: string;
+  logoUrl?: string;
   index: number;
   isVisible: boolean;
 }
@@ -41,7 +41,7 @@ const TimelineItem = ({
       <span className="timeline-dot" />
       <div className="flex gap-4">
         <div className="w-16 h-16 rounded-lg bg-white shadow-soft flex items-center justify-center p-2 flex-shrink-0 overflow-hidden">
-          {logoError ? (
+          {logoError || !logoUrl ? (
             <span className="font-display text-lg font-semibold text-primary">
               {getInitials(company)}
             </span>
