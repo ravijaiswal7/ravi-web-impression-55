@@ -59,12 +59,25 @@ const TimelineItem = ({
         </div>
         <div>
           <h3 className="font-display text-lg font-medium">{position}</h3>
-          <div className="flex items-center text-sm text-foreground/70 mt-1 mb-2">
+          <div className="flex flex-wrap items-center text-sm text-foreground/70 mt-1 mb-2">
             <span className="font-medium text-foreground/80">{company}</span>
+            {location && (
+              <>
+                <span className="mx-2">•</span>
+                <span>{location}</span>
+              </>
+            )}
             <span className="mx-2">•</span>
             <span>{period}</span>
           </div>
-          <p className="text-foreground/70">{description}</p>
+          <ul className="space-y-1.5">
+            {description.map((point, i) => (
+              <li key={i} className="text-sm text-foreground/70 flex gap-2">
+                <span className="text-primary mt-1 flex-shrink-0">•</span>
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
