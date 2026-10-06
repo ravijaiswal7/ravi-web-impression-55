@@ -46,7 +46,7 @@ const Experience = () => {
                 Work Experience
               </h3>
               <p className="text-foreground/70">
-                Over 10 years of professional experience in front-end development, 
+                Over 12 years of professional experience in front-end development, 
                 focusing on creating exceptional user interfaces and experiences.
               </p>
             </div>

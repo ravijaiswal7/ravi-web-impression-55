@@ -5,9 +5,10 @@ import LoadingImage from './LoadingImage';
 
 interface TimelineItemProps {
   company: string;
+  location?: string;
   position: string;
   period: string;
-  description: string;
+  description: string[];
   logoUrl?: string;
   index: number;
   isVisible: boolean;
@@ -18,6 +19,7 @@ const getInitials = (name: string) =>
 
 const TimelineItem = ({ 
   company, 
+  location,
   position, 
   period, 
   description, 
@@ -57,12 +59,25 @@ const TimelineItem = ({
         </div>
         <div>
           <h3 className="font-display text-lg font-medium">{position}</h3>
-          <div className="flex items-center text-sm text-foreground/70 mt-1 mb-2">
+          <div className="flex flex-wrap items-center text-sm text-foreground/70 mt-1 mb-2">
             <span className="font-medium text-foreground/80">{company}</span>
+            {location && (
+              <>
+                <span className="mx-2">•</span>
+                <span>{location}</span>
+              </>
+            )}
             <span className="mx-2">•</span>
             <span>{period}</span>
           </div>
-          <p className="text-foreground/70">{description}</p>
+          <ul className="space-y-1.5">
+            {description.map((point, i) => (
+              <li key={i} className="text-sm text-foreground/70 flex gap-2">
+                <span className="text-primary mt-1 flex-shrink-0">•</span>
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
@@ -93,31 +108,61 @@ const Timeline = () => {
 
   const timelineItems = [
     {
+      company: 'HCLTech',
+      location: 'Bangalore',
+      position: 'Technical Manager – Lead Frontend Developer',
+      period: 'Apr 2025 – Present',
+      description: [
+        'Led World Bank Data Hub frontend delivery on AEM and Edge Delivery Services, improving Lighthouse performance by 30%.',
+        'Mentored 5+ developers through code reviews and Agile routines, reducing defects by 20%.',
+        'Partnered with clients on system design and technical blockers, cutting resolution time by 40%.'
+      ],
+      logoUrl: undefined
+    },
+    {
       company: 'LTIMindtree',
-      position: 'Module Lead, Senior Front End Developer',
-      period: 'Current',
-      description: 'Leading front-end development teams in React JS, implementing best practices, and driving innovation to deliver exceptional user experiences.',
+      location: 'Bangalore',
+      position: 'Module Lead',
+      period: 'Feb 2021 – Apr 2025',
+      description: [
+        'Delivered AEM and Edge Delivery applications across 5 enterprise projects, reducing defects by 20%.',
+        'Led React 18 upgrades and React Testing Library adoption to strengthen reliability.',
+        'Championed Agile practices, code reviews, and knowledge sharing across project teams.'
+      ],
       logoUrl: '/images/certifications/ltimindtree_logo.jpg'
     },
     {
       company: 'HARMAN India',
+      location: 'Bangalore',
       position: 'Technical Lead',
-      period: '2019 - 2021',
-      description: 'Spearheaded front-end development initiatives, mentored junior developers, and implemented complex UI features for automotive solutions.',
+      period: 'Oct 2019 – Jan 2021',
+      description: [
+        'Drove Simmons Insights proof-of-concepts, improving usability and securing stakeholder buy-in.',
+        'Owned architecture decisions, achieving 90%+ test coverage with Jest and Enzyme.'
+      ],
       logoUrl: undefined
     },
     {
-      company: 'Societe Generale Global Solution Centre',
+      company: 'Société Générale Global Solutions Centre',
+      location: 'Bangalore',
       position: 'Senior Software Engineer',
-      period: '2017 - 2019',
-      description: 'Delivered robust front-end solutions for financial applications, collaborated with cross-functional teams, and optimized application performance.',
+      period: 'Apr 2017 – Oct 2019',
+      description: [
+        'Automated KPI dashboards for leadership reporting, improving reporting efficiency by 40%.',
+        'Built React-Redux applications on Web API and SQL Server, improving data visualization and workflow efficiency.'
+      ],
       logoUrl: undefined
     },
     {
       company: 'IGATE',
+      location: 'Bangalore',
       position: 'Software Engineer',
-      period: '2014 - 2017',
-      description: 'Built responsive and accessible web interfaces, collaborated with UX teams, and contributed to the implementation of design systems.',
+      period: 'Jun 2014 – Apr 2017',
+      description: [
+        'Delivered COMPASS and SCORE systems for NBCUniversal, supporting 10,000+ media assets.',
+        'Built front-end solutions using React and Redux, improving system reliability.',
+        'Developed backend components in C# and SQL Server, ensuring seamless UI integration.'
+      ],
       logoUrl: undefined
     }
   ];
@@ -129,6 +174,7 @@ const Timeline = () => {
           <TimelineItem
             key={index}
             company={item.company}
+            location={item.location}
             position={item.position}
             period={item.period}
             description={item.description}
