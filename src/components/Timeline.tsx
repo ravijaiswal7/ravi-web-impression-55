@@ -97,7 +97,7 @@ const Timeline = () => {
       position: 'Module Lead, Senior Front End Developer',
       period: 'Current',
       description: 'Leading front-end development teams in React JS, implementing best practices, and driving innovation to deliver exceptional user experiences.',
-      logoUrl: 'https://media.licdn.com/dms/image/v2/D560BAQGGLta3hPvdRg/company-logo_400_400/company-logo_400_400/0/1735812238218/ltimindtree_logo?e=1748476800&v=beta&t=RAijA3ENiSKBdS9cK3DfHsvYxqcvV6pmGbGoPw1ypVk'
+      logoUrl: '/images/certifications/ltimindtree_logo.jpg'
     },
     {
       company: 'HARMAN India',
