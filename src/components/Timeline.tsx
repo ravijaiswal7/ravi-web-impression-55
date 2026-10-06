@@ -117,7 +117,7 @@ const Timeline = () => {
         'Mentored 5+ developers through code reviews and Agile routines, reducing defects by 20%.',
         'Partnered with clients on system design and technical blockers, cutting resolution time by 40%.'
       ],
-      logoUrl: undefined
+      logoUrl: '/assets/hcltech_logo.jpg'
     },
     {
       company: 'LTIMindtree',
@@ -140,7 +140,7 @@ const Timeline = () => {
         'Drove Simmons Insights proof-of-concepts, improving usability and securing stakeholder buy-in.',
         'Owned architecture decisions, achieving 90%+ test coverage with Jest and Enzyme.'
       ],
-      logoUrl: undefined
+      logoUrl: '/assets/harmanindia_logo.jpg'
     },
     {
       company: 'Société Générale Global Solutions Centre',
@@ -151,7 +151,7 @@ const Timeline = () => {
         'Automated KPI dashboards for leadership reporting, improving reporting efficiency by 40%.',
         'Built React-Redux applications on Web API and SQL Server, improving data visualization and workflow efficiency.'
       ],
-      logoUrl: undefined
+      logoUrl: '/assets/societe_generale_global_solution_centre_logo.jpg'
     },
     {
       company: 'IGATE',
@@ -163,7 +163,7 @@ const Timeline = () => {
         'Built front-end solutions using React and Redux, improving system reliability.',
         'Developed backend components in C# and SQL Server, ensuring seamless UI integration.'
       ],
-      logoUrl: undefined
+      logoUrl: '/assets/igate_logo.jpg'
     }
   ];
 
