@@ -53,7 +53,7 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
             <p className="text-lg text-foreground/80 mb-6">
-              I'm a Frontend Engineering Manager with 11+ years of experience designing and delivering scalable web applications. My expertise spans React, Next.js, JavaScript, and TypeScript, and I focus on clean architecture and practical decisions that help teams move faster while maintaining reliability and performance.
+              I'm a Frontend Engineering Manager with 12+ years of experience designing and delivering scalable web applications. My expertise spans React, Next.js, JavaScript, and TypeScript, and I focus on clean architecture and practical decisions that help teams move faster while maintaining reliability and performance.
             </p>
             <p className="text-lg text-foreground/80 mb-6">
               Over the years, I've worked with global clients including the World Bank, GE Healthcare, Deloitte, MRI|SIMMONS, and NBC Universal, leading projects that improved usability, performance, and overall user experience. At HCLTech, I currently lead frontend development for the World Bank Data Hub, where I guided the upgrade to React 18, introduced modern testing practices, and improved Lighthouse performance scores by 30%. At LTIMindtree, I delivered high-impact solutions for healthcare and enterprise clients, mentoring developers and ensuring smooth adoption of new technologies. My earlier roles at Harman, Société Générale, and IGATE gave me a strong foundation in full-stack development, problem-solving, and building robust UI workflows.
@@ -69,7 +69,7 @@ const About = () => {
               <div className="space-y-4">
                 <div className="flex items-center gap-2">
                   <Briefcase className="text-primary w-5 h-5" />
-                  <span className="font-medium">11+ Years Experience</span>
+                  <span className="font-medium">12+ Years Experience</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Code className="text-primary w-5 h-5" />
