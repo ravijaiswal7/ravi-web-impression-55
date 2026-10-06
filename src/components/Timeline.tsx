@@ -5,9 +5,10 @@ import LoadingImage from './LoadingImage';
 
 interface TimelineItemProps {
   company: string;
+  location?: string;
   position: string;
   period: string;
-  description: string;
+  description: string[];
   logoUrl?: string;
   index: number;
   isVisible: boolean;
