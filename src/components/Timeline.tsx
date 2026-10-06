@@ -19,6 +19,7 @@ const getInitials = (name: string) =>
 
 const TimelineItem = ({ 
   company, 
+  location,
   position, 
   period, 
   description, 
