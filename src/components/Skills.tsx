@@ -100,6 +100,8 @@ const Skills = () => {
       skills: [
         { name: 'Redux', level: 90 },
         { name: 'Next.js', level: 80 },
+        { name: 'Adobe AEM', level: 80 },
+        { name: 'Edge Delivery Services', level: 75 },
         { name: 'Material UI', level: 85 },
         { name: 'Tailwind CSS', level: 80 }
       ],
